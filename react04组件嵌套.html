@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+
+
+</head>
+<body>
+
+
+ <div id="ss"></div>
+ <script type="text/babel">
+     /*组件1*/
+
+     var Guo=React.createClass({
+
+      render:function(){
+         return (<a className="f">coo</a>)
+      }
+     })
+      var Wei=React.createClass({
+
+      render:function(){
+         return (<a className="f">wei</a>)
+      }
+     });
+
+     var CommentBox=React.createClass({
+
+     render:function(){
+
+     return (
+      /*加入组件Guo,Wei*/
+     <div className="f">
+         <Guo/>
+         <br/>
+         <Wei/>
+          <br/>
+
+         <span>=蜗牛</span>
+     </div>
+     )
+
+     }
+
+
+
+     });
+
+
+     React.render(
+     <CommentBox/>,
+     document.getElementById("ss")
+
+
+     )
+
+
+ </script>
+
+
+
+
+</body>
+</html>

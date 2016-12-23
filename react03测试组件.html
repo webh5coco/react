@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+<body>
+
+<div id="ne"></div>
+
+<script type="text/babel">
+    var Guo=React.createClass({
+    /*创建组件，组件名称大写，小写报错*/
+       render:function(){
+       /*渲染内容*/
+         return (
+           <h1 className="cocoClass">this is coco's demo</h1>
+         )
+       }
+    });
+    React.render(
+    /*渲染组件内容至节点，实例化组件*/
+    <Guo/>,
+    document.getElementById("ne")
+
+
+    )
+
+
+</script>
+
+</body>
+</html>

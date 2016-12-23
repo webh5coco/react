@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+<body>
+<div id="pl"></div>
+<script type="text/babel">
+
+    var CommentList=React.createClass({
+
+     render:function(){
+
+     return (
+
+     <div class="commentList">
+          <div author="coco">this is coco's name</div>
+          <div author="guoer">that's guoer</div>
+          <Coment name="这是属性值">This is *namer* comment </Coment>
+     </div>
+
+     )
+
+     }
+
+
+    });
+
+    var Coment=React.createClass({
+
+    render:function(){
+
+    return (
+    <div class="showName">
+    属性值：
+      {this.props.name}
+      /*这是属性值,props属性值*/
+     <br/>
+      {this.props.children}
+      /*里面的内容this is *name*coment*/
+
+    </div>
+
+    )
+
+
+    }
+
+    })
+
+
+    React.render(
+     <CommentList/>,
+     document.getElementById("pl")
+
+    )
+
+</script>
+
+</body>
+</html>

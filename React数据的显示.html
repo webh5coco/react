@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+<body>
+<div id="st"></div>
+
+<script type="text/babel">
+
+   var Showdate=React.createClass({
+
+   render:function(){
+    return (
+    <h1>北京时间<br/>{this.props.data.toString()}</h1>
+    )
+   }
+
+   });
+
+setInterval(function(){
+React.render(
+
+   <Showdate data={new Date()}/>,
+   document.getElementById("st")
+
+   )
+
+
+},1000)
+
+
+
+
+
+
+</script>
+</body>
+</html>

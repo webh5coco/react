@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+<body>
+   <div id="exp"></div>
+
+   <script type="text/babel">
+
+       var Website=React.createClass({
+        getInitialState:function(){
+        return {
+        name:"cooc",
+        site:"http://www.baidu.com"
+        };
+        },
+        render:function(){
+
+        return (
+
+        <div>
+            <Name name={this.state.name}/>
+
+            /*读取getInitialState初始值的值*/
+
+            <Link site={this.state.site}/>
+        </div>
+
+        )
+
+        }
+
+       });
+
+       var Name=React.createClass({
+        render:function(){
+          return (
+            <div>{this.props.name}</div>
+          )
+        }
+       });
+        var Link=React.createClass({
+        render:function(){
+          return (
+            <div>{this.props.site}</div>
+          )
+        }
+       })
+       React.render(
+       <Website/>,
+       document.getElementById("exp")
+       )
+
+
+
+
+
+
+   </script>
+
+</body>
+</html>

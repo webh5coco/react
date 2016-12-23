@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+<style>
+
+.coName{
+    color:red;
+}
+
+</style>
+<body>
+<div class="hh"></div>
+<div class="hh"></div>
+<div class="hh"></div>
+<div class="hh"></div>
+<div id="news"></div>
+<div id="content"></div><!--渲染的位置-->
+创建一个组建，首先命名必须是大写，createClass是创建一个组件,
+<script type="text/babel">
+
+    var CommentBox=React.createClass({
+      render:function(){
+          return(
+             <div className="coName">
+              hello i am coco
+             </div>
+          );
+      }
+
+    });
+     React.render(
+     <CommentBox/>,
+     document.getElementById("content")
+
+  )
+
+
+</script>
+<!--以上代码解析成的XML语法格式-->
+
+<script>
+    var  CommentBox=React.createClass({
+        displayName:"CommentBox",
+        render:function(){
+            return (
+                    React.createElement(
+                            'div',{className:"commentBox"},"hello this is a CommentBox."
+                    )
+            );
+        }
+
+    });
+    React.render(
+            React.createElement(CommentBox,null),
+            document.getElementById("news")
+
+    );
+
+
+</script>
+
+
+
+</body>
+</html>
